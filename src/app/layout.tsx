@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { sans } from "@/fonts"
-import Navbar from "@/components/navbar";
-import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Anh Do",
