@@ -10,7 +10,7 @@ import Image from "next/image";
 export default function About() {
     const experienceSorted = EXPERIENCE.sort((a,b) => (b.start.year*12 + b.start.month) - (a.start.year*12 + a.start.month));
     const current : ExperienceInterface[] = [], past : ExperienceInterface[] = [];
-    for (const exp of experienceSorted) { exp.end ? past.push(exp) : current.push(exp) }
+    for (const exp of experienceSorted) { if (exp.end) {past.push(exp)} else {current.push(exp)} }
 
     const [name, setName] = useState('anh');
 
@@ -19,7 +19,7 @@ export default function About() {
             {/* left column */}
             <div className="md:fixed md:h-full max-h-screen md:w-60 lg:w-96 flex flex-col px-2 md:px-6 lg:px-8 py-8 sm:py-10 gap-y-8 sm:gap-y-10 items-center">
                 <Image alt="a pixelated star" src={'/star.png'} className="w-24 sm:w-24 md:w-28 lg:w-36"/>
-                <button onClick={() => {name == 'anh' ? setName('tuong anh') : setName('anh')}} className={`${display.className} text-4xl`}>hey, i&apos;m {name}</button>
+                <button onClick={() => {if (name == 'anh') {setName('tuong anh')} else {setName('anh')}}} className={`${display.className} text-4xl`}>hey, i&apos;m {name}</button>
                 <p className="text-center md:w-fit text-sm lg:text-base">{DESCRIPTION}</p>
                 <div className="flex flex-col px-2 gap-y-4 w-full">
                     <div className="flex flex-row gap-x-4 w-full h-fit">
