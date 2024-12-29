@@ -26,7 +26,7 @@ export default function Navbar() {
             <button onClick={() => {setOpenNavigation(true)}} className={`sm:hidden -tracking-[0.15em] rotate-90 ${display.className}`}>|||</button>
             {openNavigation && 
                 <div className={`sm:hidden w-screen h-screen fixed top-0 right-0 flex flex-col gap-y-4 px-6 justify-center text-center place-items-end text-4xl ${display.className} bg-white`}>
-                        <button onClick={() => {setOpenNavigation(false)}} className="sm:hidden absolute top-5"><Image alt="x" src={'/x.png'} className="size-5"/></button>
+                        <button onClick={() => {setOpenNavigation(false)}} className="sm:hidden absolute top-5"><img alt="x" src={'/x.png'} className="size-5"/></button>
                         <a href='/highlights' className={pathname == '/highlights' ? 'underline' : 'hover:underline'}>highlights</a>
                         <a href='/about' className={pathname == '/about' ? 'underline' : 'hover:underline'}>about</a>
                         <a href='/contact' className={pathname == '/contact' ? 'underline' : 'hover:underline'}>contact</a>
