@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ContactButton from "@/components/contact-button";
 import { display } from "@/fonts";
 
 export default function Contact() {
