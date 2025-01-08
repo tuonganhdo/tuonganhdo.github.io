@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { display } from "@/fonts"
 
 export default function Loading() {
