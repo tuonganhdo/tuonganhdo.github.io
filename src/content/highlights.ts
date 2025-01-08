@@ -10,6 +10,7 @@ export interface Highlight {
         lg: number
     },
     desc: string,
+    url?: string
 }
 
 export const HIGHLIGHTS : Highlight[] = [
@@ -63,7 +64,8 @@ export const HIGHLIGHTS : Highlight[] = [
             sm: 6,
             lg: 8
         },
-        desc: "A tool for finding study spots on the go."
+        desc: "A tool for finding study spots on the go.",
+        url: "https://illinois-spaced-out.vercel.app"
     },
     {
         name: 'journalytics',

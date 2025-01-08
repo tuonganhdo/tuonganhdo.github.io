@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-export default function Highlight({name, desc} : {name : string, desc : string}) {
+export default function Highlight({name, desc, url} : {name : string, desc : string, url : string | undefined}) {
     const id = name.replace(/(\W|_)/g, '-')
     
     return(
-        <a href={`/projects/${id}`} className="relative size-fit max-w-full max-h-full flex flex-col place-items-center gap-y-4 group">
+        <a href={url ? url : `/projects/${id}`} className="relative size-fit max-w-full max-h-full flex flex-col place-items-center gap-y-4 group">
             <div className="h-12 md:h-14 aspect-[4/3] flex">
                 <Image alt="project icon" className="object-contain object-bottom max-w-full max-h-full mx-auto" src={`/highlights/${id}.png`}/>
             </div>

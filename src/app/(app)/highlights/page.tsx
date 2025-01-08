@@ -1,3 +1,5 @@
+"use client";
+
 import { display } from "@/fonts";
 import { HIGHLIGHTS } from '@/content/highlights'
 import Highlight from "@/components/highlight";
@@ -15,9 +17,9 @@ export default function Highlights() {
 
     return(
         <div className="w-full grow grid place-items-center place-content-center grid-rows-5 grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-4 px-6 sm:pb-10">
-            {HIGHLIGHTS.map(({name, desc}, i) => (
+            {HIGHLIGHTS.map(({name, desc, url}, i) => (
                 <div key={i} className={gridPositions[i]}>
-                    <Highlight name={name} desc={desc}/>
+                    <Highlight name={name} desc={desc} url={url}/>
                 </div>
             ))}
             <p className={`leading-none text-xl sm:text-2xl lg:text-4xl text-center row-start-3 col-start-2 sm:col-start-3 lg:col-start-3 col-span-2 lg:col-span-4 ${display.className}`}>builder of sorts and <br className="hidden md:block"/>designer sometimes</p>
