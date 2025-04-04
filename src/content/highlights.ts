@@ -94,7 +94,7 @@ export const HIGHLIGHTS : Highlight[] = [
         desc: "An all-in-one app for household costs and chores."
     },
     {
-        name: 'home.o',
+        name: 'beacon',
         row: {
             xs: 5,
             sm: 5

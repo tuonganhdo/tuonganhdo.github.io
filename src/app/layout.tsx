@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { sans } from "@/fonts"
+import WIP from "@/components/wip";
 
 export const metadata: Metadata = {
   title: "Anh Do",
@@ -22,6 +23,7 @@ export default function RootLayout({
         className={`antialiased ${sans.className} w-screen min-h-screen flex flex-col font-light scrollbar-hidden`}
       >
         {children}
+        <WIP/>
       </body>
     </html>
   );
